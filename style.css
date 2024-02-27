@@ -1,19 +1,35 @@
+body {
+    overflow-x: hidden;
+}
+
 p {
     margin: 0;
     padding: 0;
 }
 
+.row {
+    --bs-gutter-x: 0;
+}
+
+.container {
+    --bs-gutter-x: 0;
+}
+
 .price {
     border: 1px solid red !important;
+    width: max-content !important;
 }
 
-.card {
+.main-container .card {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 15px 10px;
+    padding: 0;
+    height: 590px;
+    align-items: center ;
 }
 
-.card img {
-    border-bottom: 1px solid rgb(209, 209, 209) !important;
+.card-img-top, .search-img {
     width: 261px !important;
     height: 261px !important;
     object-fit: contain;
+    border: none !important;
 }
