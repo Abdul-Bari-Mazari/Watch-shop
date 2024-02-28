@@ -22,10 +22,10 @@
       href="style.css"
     />
   </head>
-  <body>
+  <body data-bs-theme="dark">
     <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-lg bg-black">
+  
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a
           class="navbar-brand fw-semibold fs-3 text-light"
@@ -33,7 +33,7 @@
           ><i class="fa-solid fa-gem"></i> Diamond Watches</a
         >
         <button
-          class="navbar-toggler"
+          class="navbar-toggler" 
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -50,7 +50,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
           <div
-            class="d-flex gap-2"
+            class="menu-options d-flex gap-2 align-items-center"
             role="search"
           >
             <select
@@ -68,18 +68,29 @@
 
             <button
               onclick="clearSearch()"
-              class="btn btn-outline-danger text-light rounded"
+              class="btn bg-danger text-light rounded"
               type="submit"
             >
               Clear
             </button>
             <button
               onclick="searchWatch()"
-              class="btn btn-outline-success text-light rounded"
+              class="btn bg-success text-light rounded"
               type="submit"
             >
               Search
             </button>
+
+            <div class="form-check form-switch mx-4">
+                <input
+                  class="form-check-input p-2"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  checked
+                  onclick="myFunction()"
+                />
+              </div>
           </div>
         </div>
       </div>
@@ -94,11 +105,17 @@
         id="main"
       ></div>
 
-      <div
-        class="row gap-4"
-        id="watch-details"
-      ></div>
     </section>
+    <div
+      class="row gap-4"
+      id="watch-details"
+    ></div>
+
+    <footer class="footer mt-5">
+ 
+        <p class="text-center fw-semibold">&copy;2024 Abdul Bari | All Rights Reserved</p>
+     
+      </footer>
 
     <script src="app.js"></script>
 

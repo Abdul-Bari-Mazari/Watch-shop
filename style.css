@@ -11,8 +11,12 @@ p {
     --bs-gutter-x: 0;
 }
 
-.container {
+/* .container {
     --bs-gutter-x: 0;
+} */
+
+.navbar, footer {
+    background-color: grey;
 }
 
 .price {
@@ -32,4 +36,32 @@ p {
     height: 261px !important;
     object-fit: contain;
     border: none !important;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+@media (max-width: 420px) {
+    .menu-options {
+        flex-direction: column;
+    }
+
+    .menu-options button {
+        width: 100%;
+    }
 }
