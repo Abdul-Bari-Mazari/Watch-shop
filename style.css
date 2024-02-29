@@ -1,67 +1,88 @@
+html,
 body {
-    overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+  }
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  min-height: calc(72%);
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .row {
-    --bs-gutter-x: 0;
+  --bs-gutter-x: 0;
 }
 
 /* .container {
     --bs-gutter-x: 0;
 } */
 
-.navbar, footer {
-    background-color: grey;
+.navbar,
+footer {
+  background-color: grey;
 }
 
 .price {
-    border: 1px solid red !important;
-    width: max-content !important;
+  border: 1px solid red !important;
+  width: max-content !important;
 }
 
 .main-container .card {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 15px 10px;
-    padding: 0;
-    height: 590px;
-    align-items: center ;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 15px 10px;
+  padding: 0;
+  height: 590px;
+  align-items: center;
 }
 
-.card-img-top, .search-img {
-    width: 261px !important;
-    height: 261px !important;
-    object-fit: contain;
-    border: none !important;
+.card-img-top,
+.search-img {
+  width: 261px !important;
+  height: 261px !important;
+  object-fit: contain;
+  border: none !important;
 }
 
 .footer {
-    position: relative;
-    width: 100%;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  margin-top: 35px;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 420px) {
+  .menu-options {
     flex-direction: column;
   }
 
-.footer p {
-    color: #fff;
-    margin: 15px 0 10px 0;
-    font-size: 1rem;
-    font-weight: 300;
+  .menu-options button {
+    width: 100%;
   }
-
-@media (max-width: 420px) {
-    .menu-options {
-        flex-direction: column;
-    }
-
-    .menu-options button {
-        width: 100%;
-    }
 }
